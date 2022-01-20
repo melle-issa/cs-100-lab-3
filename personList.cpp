@@ -12,7 +12,7 @@ PersonList::PersonList(){
 }
 
 PersonList::~PersonList(){
-   for (int i = 0; i < capacity + 1; i++){
+   for (int i = 0; i < numPeople+1; i++){
       delete *(theList + i);
    }
    delete [] theList;
@@ -48,7 +48,6 @@ void PersonList::addPerson(const char* child_name, const char* father_name, cons
     insertIntoList(newChild);
     father->addChild(newChild);
     mother->addChild(newChild);
-    delete father, mother, newChild;
 }
 
 void PersonList::insertIntoList(Person *newPerson){
