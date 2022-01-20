@@ -16,7 +16,8 @@ Person::Person(const char *name_, Person* father_, Person* mother_){
 }
 
 Person::~Person(){
-    delete[] children; 
+    delete[] children;
+    delete[] name; 
 }
 
 void Person::addChild(Person *newChild){
